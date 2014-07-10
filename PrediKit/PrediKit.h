@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Architechies. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <UIKit/UIKit.h>
 
 //! Project version number for PrediKit.
 FOUNDATION_EXPORT double PrediKitVersionNumber;

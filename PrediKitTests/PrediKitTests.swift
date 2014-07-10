@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 Architechies. All rights reserved.
 //
 
-import Cocoa
+import Foundation
 import XCTest
+import PrediKitMac
 
 class PrediKitTests: XCTestCase {
     
@@ -21,16 +22,26 @@ class PrediKitTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testBasicPredicate() {
+        XCTAssertEqualObjects(NSPredicate.fromClosure { $0 == 1 }.description, "SELF == 1", "Predicate tests that self equals 1")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
+    func testKeyPathPredicate() {
+        XCTAssertEqualObjects(NSPredicate.fromClosure { $0["value"] == 1 }.description, "value == 1", "Predicate tests that self.value equals 1")
     }
     
+    func testExpressionPredicate() {
+        XCTAssertEqualObjects(NSPredicate.fromClosure { $0["nextStep"] == $0["step"] + 1 }.description, "nextStep == step + 1", "Predicate tests that self.value equals 1")
+    }
+
+    func testCompoundPredicate() {
+        XCTAssertEqualObjects(NSPredicate.fromClosure { $0 == "hello" && $0["value"] == 1 }.description, "SELF == \"hello\" AND value == 1", "Predicate tests that self.value equals 1")
+    }
+    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measureBlock() {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }    
 }
