@@ -1,0 +1,43 @@
+# First column: type of function
+# Second: name, including class it's extending and .Type if it's a class method
+# Third: Argument types
+# Fourth: Return type
+# Fifth: strategy for generating code
+# Sixth: code to generate
+@infix + NSExpression NSExpression function add:to:
+@infix - NSExpression NSExpression function from:subtract:
+@infix * NSExpression NSExpression function multiply:by:
+@infix / NSExpression NSExpression function divide:by:
+@infix % NSExpression NSExpression function modulus:by:
+@prefix - NSExpression NSExpression custom 0 - expr
+
+@infix | NSExpression NSExpression function bitwiseOr:with:
+@infix & NSExpression NSExpression function bitwiseAnd:with:
+@infix ^ NSExpression NSExpression function bitwiseXor:with:
+@infix << NSExpression NSExpression function leftshift:by:
+@infix >> NSExpression NSExpression function rightshift:by:
+@prefix ~ NSExpression NSExpression function onesComplement:
+
+2 pow NSExpression NSExpression function raise:toPower:
+1 countElements NSExpression NSExpression function count:
+1 minElement NSExpression NSExpression function min:
+1 maxElement NSExpression NSExpression function max:
+# XXX average:
+# XXX median:
+# XXX mode:
+# XXX stddev:
+1 sqrt NSExpression NSExpression function sqrt:
+1 log10 NSExpression NSExpression function log:
+1 log NSExpression NSExpression function ln:
+1 exp NSExpression NSExpression function exp:
+1 floor NSExpression NSExpression function floor:
+1 ciel NSExpression NSExpression function cieling:
+1 abs NSExpression NSExpression function abs:
+1 trunc NSExpression NSExpression function trunc:
+var NSExpression.uppercaseString Void NSExpression function uppercase:
+var NSExpression.lowercaseString Void NSExpression function lowercase:
+0 arc4random Void NSExpression function random
+1 arc4random_uniform NSExpression NSExpression function random:
+0 NSDate.Type.dynamicDate Void NSExpression function now
+# XXX noindex:
+1 NSExpression.distanceFromLocation NSExpression NSExpression function distanceToLocation:fromLocation:
