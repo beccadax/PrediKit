@@ -38,7 +38,7 @@ extension Operator {
                     scope += "    \(line)\n"
                 }
                 
-                scope += "}"
+                scope += "}\n"
                 
                 return scope
             }
@@ -47,7 +47,7 @@ extension Operator {
             }
         }
         
-        func swiftDeclaration(#argumentType: RuntimeType, returnType: RuntimeType) -> String {
+        func swiftDeclaration(#argumentType: RuntimeType, anyObjectArguments: [Int], returnType: RuntimeType) -> String {
             var decl = ""
             
             switch self {
@@ -63,8 +63,15 @@ extension Operator {
             case .ComputedProperty:
                 decl += "var \(name): "
             case .InfixOperator, .PrefixOperator, .VoidFunction, .UnaryFunction, .BinaryFunction:
-                decl += "func \(name)("
-                decl += join(", ", operands.map { "\($0): \(argumentType.toRaw())" })
+                decl += "func \(name) ("
+                decl += join(", ", map(realEnumerate(operands)) { (i, name) in
+                    if contains(anyObjectArguments, i) {
+                        return "\(name): AnyObject"
+                    }
+                    else {
+                        return "\(name): \(argumentType.toRaw())"
+                    }
+                })
                 decl += ") -> "
             }
             

@@ -15,8 +15,13 @@ class Operator {
     let body: Body
     
     var definition: String {
-        let def = declaration.swiftDeclaration(argumentType: argumentType, returnType: returnType) + " {\n    return " + body.generateCode(operands: declaration.operands) + "\n}"
-        return declaration.definitionInScope(definition: def) + "\n\n"
+        var def = declaration.swiftDeclaration(argumentType: argumentType, anyObjectArguments: [], returnType: returnType) + " {\n    return " + body.generateCode(operands: declaration.operands, anyObjectOperands: []) + "\n}\n"
+        if declaration.operands.count >= 2 {
+            for i in 0..<declaration.operands.count {
+                def += declaration.swiftDeclaration(argumentType: argumentType, anyObjectArguments: [ i ], returnType: returnType) + " {\n    return " + body.generateCode(operands: declaration.operands, anyObjectOperands: [ i ]) + "\n}\n"
+            }
+        }
+        return declaration.definitionInScope(definition: def) + "\n"
     }
     
     init(declaration: Declaration, argumentType: RuntimeType, returnType: RuntimeType, body: Body) {

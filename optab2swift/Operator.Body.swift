@@ -24,10 +24,17 @@ extension Operator {
             }
         }
         
-        func generateCode(#operands: [String]) -> String {
+        func generateCode(#operands: [String], anyObjectOperands: [Int]) -> String {
             switch self {
             case let .Function(functionName: name):
-                let operandList = join(", ", operands)
+                let operandList = join(", ", map(realEnumerate(operands)) { (i, name) in
+                    if contains(anyObjectOperands, i) {
+                        return "NSExpression(forConstantValue: \(name))"
+                    }
+                    else {
+                        return name
+                    }
+                })
                 return "NSExpression(forFunction: \"\(name)\", arguments: [\(operandList)])"
             case let .Custom(code: code):
                 return code
