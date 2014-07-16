@@ -19,6 +19,10 @@ extension NSFileHandle {
         }
     }
     
+    func writeString(string: String) {
+        writeData(string.dataUsingEncoding(NSUTF8StringEncoding))
+    }
+    
     enum Operation {
         case Reading, Writing
         

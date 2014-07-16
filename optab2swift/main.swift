@@ -22,9 +22,7 @@ if let inHandle = NSFileHandle.fileHandleOrStandardHandle(forPath: inFile, opera
         let inputString = NSString(data: inputData, encoding: NSUTF8StringEncoding)
         
         for op in Operator.operatorsWithString(inputString) {
-            let outputString = op.definition
-            let outputData = outputString.dataUsingEncoding(NSUTF8StringEncoding)
-            outHandle.writeData(outputData)
+            outHandle.writeString(op.definition)
         }
     }
     else {
