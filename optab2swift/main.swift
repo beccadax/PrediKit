@@ -33,6 +33,6 @@ if let inHandle = NSFileHandle.fileHandleOrStandardHandle(forPath: inFile, opera
     }
 }
 else {
-    debugPrintln("Can't open \(outFile): \(error?.localizedDescription)")
+    debugPrintln("Can't open \(inFile): \(error?.localizedDescription)")
     exit(EXIT_FAILURE)
 }
