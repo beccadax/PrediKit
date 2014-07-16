@@ -24,7 +24,6 @@ func realEnumerate<C: Swift.Collection>(collection: C) -> GeneratorOf<(C.IndexTy
     
     return GeneratorOf() {
         if i != collection.endIndex {
-            // 'i' is flagged in comparison with "'C.IndexType' is not convertible to 'CString'". Whuh?
             let value = (i, collection[i])
             i = i.successor()
             return value
