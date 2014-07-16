@@ -1,5 +1,5 @@
 //
-//  Operator.Syntax.swift
+//  Operator.Declaration.swift
 //  PrediKit
 //
 //  Created by Brent Royal-Gordon on 7/11/14.
@@ -9,7 +9,7 @@
 import Foundation
 
 extension Operator {
-    enum Syntax {
+    enum Declaration {
         case InfixOperator (name: String)
         case PrefixOperator (name: String)
         case VoidFunction (name: String, extending: String?, onType: Bool)
@@ -47,7 +47,7 @@ extension Operator {
             }
         }
         
-        func declaration(#argumentType: RuntimeType, returnType: RuntimeType) -> String {
+        func swiftDeclaration(#argumentType: RuntimeType, returnType: RuntimeType) -> String {
             var decl = ""
             
             switch self {
@@ -127,13 +127,13 @@ extension Operator {
             case "@prefix":
                 self = .PrefixOperator (name: nameString)
             case "0":
-                self = .VoidFunction (Syntax.parseFunctionName(nameString))
+                self = .VoidFunction (Declaration.parseFunctionName(nameString))
             case "1":
-                self = .UnaryFunction (Syntax.parseFunctionName(nameString))
+                self = .UnaryFunction (Declaration.parseFunctionName(nameString))
             case "2":
-                self = .BinaryFunction (Syntax.parseFunctionName(nameString))
+                self = .BinaryFunction (Declaration.parseFunctionName(nameString))
             case "var":
-                self = .ComputedProperty (Syntax.parseFunctionName(nameString))
+                self = .ComputedProperty (Declaration.parseFunctionName(nameString))
             default:
                 fatalError("Did not recognize type string")
             }

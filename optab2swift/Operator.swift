@@ -9,35 +9,35 @@
 import Foundation
 
 class Operator {
-    let syntax: Syntax // encompasses the name
+    let declaration: Declaration // encompasses the name
     let argumentType: RuntimeType
     let returnType: RuntimeType
     let body: Body
     
     var definition: String {
-        let def = syntax.declaration(argumentType: argumentType, returnType: returnType) + " {\n    return " + body.generateCode(operands: syntax.operands) + "\n}"
-        return syntax.definitionInScope(definition: def) + "\n\n"
+        let def = declaration.swiftDeclaration(argumentType: argumentType, returnType: returnType) + " {\n    return " + body.generateCode(operands: declaration.operands) + "\n}"
+        return declaration.definitionInScope(definition: def) + "\n\n"
     }
     
-    init(syntax: Syntax, argumentType: RuntimeType, returnType: RuntimeType, body: Body) {
-        self.syntax = syntax
+    init(declaration: Declaration, argumentType: RuntimeType, returnType: RuntimeType, body: Body) {
+        self.declaration = declaration
         self.argumentType = argumentType
         self.returnType = returnType
         self.body = body
     }
     
-    convenience init(syntaxTypeString: String, syntaxNameString: String, argumentTypeString: String, returnTypeString: String, bodyTypeString: String, bodyContentString: String) {
+    convenience init(declarationTypeString: String, declarationNameString: String, argumentTypeString: String, returnTypeString: String, bodyTypeString: String, bodyContentString: String) {
         self.init(
-            syntax: Syntax(typeString: syntaxTypeString, nameString: syntaxNameString),
+            declaration: Declaration(typeString: declarationTypeString, nameString: declarationNameString),
             argumentType: RuntimeType(typeString: argumentTypeString),
             returnType: RuntimeType(typeString: returnTypeString),
             body: Body(typeString: bodyTypeString, contentString: bodyContentString))
     }
     
     convenience init(line: String) {
-        let parts = split(line.unicodeScalars, { $0.isSpace() }, maxSplit: 6)
+        let parts = split(line.unicodeScalars, { $0.isSpace() }, maxSplit: 5)
         
-        self.init(syntaxTypeString: parts[0], syntaxNameString: parts[1], argumentTypeString: parts[2], returnTypeString: parts[3],  bodyTypeString: parts[4], bodyContentString: parts[5])
+        self.init(declarationTypeString: parts[0], declarationNameString: parts[1], argumentTypeString: parts[2], returnTypeString: parts[3],  bodyTypeString: parts[4], bodyContentString: parts[5])
     }
     
     class func operatorsWithLines(lines: [String]) -> [Operator] {

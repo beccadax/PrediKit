@@ -11,7 +11,7 @@
 		8424AA80196FD4C900158A7F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA7F196FD4C900158A7F /* main.swift */; };
 		8424AA85196FD50000158A7F /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA84196FD50000158A7F /* Operator.swift */; };
 		8424AA87196FD51E00158A7F /* LanguageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA86196FD51E00158A7F /* LanguageExtensions.swift */; };
-		8424AA8A196FDDD700158A7F /* Operator.Syntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA89196FDDD700158A7F /* Operator.Syntax.swift */; };
+		8424AA8A196FDDD700158A7F /* Operator.Declaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA89196FDDD700158A7F /* Operator.Declaration.swift */; };
 		8424AA8C196FDDF500158A7F /* Operator.RuntimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA8B196FDDF500158A7F /* Operator.RuntimeType.swift */; };
 		8424AA8E196FDE2200158A7F /* Operator.Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA8D196FDE2200158A7F /* Operator.Body.swift */; };
 		84DC95E6196CCF5C0037587C /* PrediKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DC95E5196CCF5C0037587C /* PrediKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -92,7 +92,7 @@
 		8424AA84196FD50000158A7F /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		8424AA86196FD51E00158A7F /* LanguageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageExtensions.swift; sourceTree = "<group>"; };
 		8424AA88196FD56F00158A7F /* optab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = optab.txt; sourceTree = "<group>"; };
-		8424AA89196FDDD700158A7F /* Operator.Syntax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.Syntax.swift; sourceTree = "<group>"; };
+		8424AA89196FDDD700158A7F /* Operator.Declaration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.Declaration.swift; sourceTree = "<group>"; };
 		8424AA8B196FDDF500158A7F /* Operator.RuntimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.RuntimeType.swift; sourceTree = "<group>"; };
 		8424AA8D196FDE2200158A7F /* Operator.Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.Body.swift; sourceTree = "<group>"; };
 		84DC95E0196CCF5C0037587C /* PrediKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrediKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,7 +161,7 @@
 				8424AA7F196FD4C900158A7F /* main.swift */,
 				8424AA86196FD51E00158A7F /* LanguageExtensions.swift */,
 				8424AA84196FD50000158A7F /* Operator.swift */,
-				8424AA89196FDDD700158A7F /* Operator.Syntax.swift */,
+				8424AA89196FDDD700158A7F /* Operator.Declaration.swift */,
 				8424AA8B196FDDF500158A7F /* Operator.RuntimeType.swift */,
 				8424AA8D196FDE2200158A7F /* Operator.Body.swift */,
 				841D85DD1972595700020EF7 /* NSFileHandleExtensions.swift */,
@@ -436,7 +436,7 @@
 			files = (
 				8424AA8E196FDE2200158A7F /* Operator.Body.swift in Sources */,
 				8424AA80196FD4C900158A7F /* main.swift in Sources */,
-				8424AA8A196FDDD700158A7F /* Operator.Syntax.swift in Sources */,
+				8424AA8A196FDDD700158A7F /* Operator.Declaration.swift in Sources */,
 				8424AA85196FD50000158A7F /* Operator.swift in Sources */,
 				8424AA8C196FDDF500158A7F /* Operator.RuntimeType.swift in Sources */,
 				8424AA87196FD51E00158A7F /* LanguageExtensions.swift in Sources */,
