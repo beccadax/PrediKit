@@ -43,6 +43,13 @@
 			remoteGlobalIDString = 8424AA7C196FD4C900158A7F;
 			remoteInfo = optab2swift;
 		};
+		84321F85197CAF72008EFC70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8424AA7C196FD4C900158A7F;
+			remoteInfo = optab2swift;
+		};
 		84DC95ED196CCF5C0037587C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
@@ -285,7 +292,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DC95F6196CCF5C0037587C /* Build configuration list for PBXNativeTarget "PrediKitMac" */;
 			buildPhases = (
-				84321F81197CA6D5008EFC70 /* ShellScript */,
+				84321F81197CA6D5008EFC70 /* Rebuild GeneratedOperators.swift */,
 				84DC95DB196CCF5C0037587C /* Sources */,
 				84DC95DC196CCF5C0037587C /* Frameworks */,
 				84DC95DD196CCF5C0037587C /* Headers */,
@@ -324,6 +331,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DC9622196D0A300037587C /* Build configuration list for PBXNativeTarget "PrediKitiOS" */;
 			buildPhases = (
+				84321F87197CAF8F008EFC70 /* Rebuild GeneratedOperators.swift */,
 				84DC960A196D0A300037587C /* Sources */,
 				84DC960B196D0A300037587C /* Frameworks */,
 				84DC960C196D0A300037587C /* Headers */,
@@ -332,6 +340,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				84321F86197CAF72008EFC70 /* PBXTargetDependency */,
 			);
 			name = PrediKitiOS;
 			productName = PrediKit;
@@ -439,7 +448,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		84321F81197CA6D5008EFC70 /* ShellScript */ = {
+		84321F81197CA6D5008EFC70 /* Rebuild GeneratedOperators.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,12 +457,30 @@
 				"$(SRCROOT)/optab2swift/optab.txt",
 				"$(CONFIGURATION_BUILD_DIR)/optab2swift",
 			);
+			name = "Rebuild GeneratedOperators.swift";
 			outputPaths = (
 				"$(SRCROOT)/PrediKit/GeneratedOperators.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "\"$CONFIGURATION_BUILD_DIR/optab2swift\" \"$SCRIPT_INPUT_FILE_0\" \"$SCRIPT_OUTPUT_FILE_0\"\n";
+		};
+		84321F87197CAF8F008EFC70 /* Rebuild GeneratedOperators.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/optab2swift/optab.txt",
+				"$(CONFIGURATION_BUILD_DIR)/../$(CONFIGURATION)/optab2swift",
+			);
+			name = "Rebuild GeneratedOperators.swift";
+			outputPaths = (
+				"$(SRCROOT)/GeneratedOperators.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\"$CONFIGURATION_BUILD_DIR/../$CONFIGURATION/optab2swift\" \"$SCRIPT_INPUT_FILE_0\" \"$SCRIPT_OUTPUT_FILE_0\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -522,6 +549,11 @@
 			isa = PBXTargetDependency;
 			target = 8424AA7C196FD4C900158A7F /* optab2swift */;
 			targetProxy = 84321F7F197CA6C8008EFC70 /* PBXContainerItemProxy */;
+		};
+		84321F86197CAF72008EFC70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8424AA7C196FD4C900158A7F /* optab2swift */;
+			targetProxy = 84321F85197CAF72008EFC70 /* PBXContainerItemProxy */;
 		};
 		84DC95EE196CCF5C0037587C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
