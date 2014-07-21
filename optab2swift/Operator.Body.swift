@@ -26,16 +26,19 @@ extension Operator {
         }
         
         func generateCode(#operands: [String], anyObjectOperands: [Int]) -> String {
+            let enumeratedOperands = realEnumerate(operands)
+            let literalOperands = Array(enumeratedOperands).map { (i, name) -> String in
+                if contains(anyObjectOperands, i) {
+                    return "NSExpression(forConstantValue: \(name))"
+                }
+                else {
+                    return name
+                }
+            }
+            
             switch self {
             case let .Function(functionName: name):
-                let operandList = join(", ", map(realEnumerate(operands)) { (i, name) in
-                    if contains(anyObjectOperands, i) {
-                        return "NSExpression(forConstantValue: \(name))"
-                    }
-                    else {
-                        return name
-                    }
-                })
+                let operandList = join(", ", literalOperands)
                 return "NSExpression(forFunction: \"\(name)\", arguments: [\(operandList)])"
             case let .Custom(code: code):
                 return code
