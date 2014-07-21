@@ -40,6 +40,10 @@ extension NSFileHandle {
             case .Reading:
                 return NSFileHandle.fileHandleForReadingFromURL(URL, error: error)
             case .Writing:
+                if URL && !(URL!.checkResourceIsReachableAndReturnError(nil)) {
+                    // Create the file
+                    NSData().writeToURL(URL, options: .DataWritingWithoutOverwriting, error: nil)
+                }
                 return NSFileHandle.fileHandleForWritingToURL(URL, error: error)
             }
         }
