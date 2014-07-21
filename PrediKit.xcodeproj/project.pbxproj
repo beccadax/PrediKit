@@ -454,8 +454,8 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/optab2swift/optab.txt",
 				"$(CONFIGURATION_BUILD_DIR)/optab2swift",
+				"$(SRCROOT)/optab2swift/optab.txt",
 			);
 			name = "Rebuild GeneratedOperators.swift";
 			outputPaths = (
@@ -463,7 +463,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "\"$CONFIGURATION_BUILD_DIR/optab2swift\" \"$SCRIPT_INPUT_FILE_0\" \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\" \"$SCRIPT_INPUT_FILE_1\" \"$SCRIPT_OUTPUT_FILE_0\"\n";
 		};
 		84321F87197CAF8F008EFC70 /* Rebuild GeneratedOperators.swift */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -471,8 +471,8 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/optab2swift/optab.txt",
 				"$(CONFIGURATION_BUILD_DIR)/../$(CONFIGURATION)/optab2swift",
+				"$(SRCROOT)/optab2swift/optab.txt",
 			);
 			name = "Rebuild GeneratedOperators.swift";
 			outputPaths = (
@@ -480,7 +480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "\"$CONFIGURATION_BUILD_DIR/../$CONFIGURATION/optab2swift\" \"$SCRIPT_INPUT_FILE_0\" \"$SCRIPT_OUTPUT_FILE_0\"\n";
+			shellScript = "\"$SCRIPT_INPUT_FILE_0\" \"$SCRIPT_INPUT_FILE_1\" \"$SCRIPT_OUTPUT_FILE_0\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
