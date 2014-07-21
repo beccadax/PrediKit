@@ -14,6 +14,8 @@
 		8424AA8A196FDDD700158A7F /* Operator.Declaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA89196FDDD700158A7F /* Operator.Declaration.swift */; };
 		8424AA8C196FDDF500158A7F /* Operator.RuntimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA8B196FDDF500158A7F /* Operator.RuntimeType.swift */; };
 		8424AA8E196FDE2200158A7F /* Operator.Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA8D196FDE2200158A7F /* Operator.Body.swift */; };
+		84321F83197CACC7008EFC70 /* GeneratedOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84321F82197CACC7008EFC70 /* GeneratedOperators.swift */; };
+		84321F84197CACE1008EFC70 /* GeneratedOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84321F82197CACC7008EFC70 /* GeneratedOperators.swift */; };
 		84DC95E6196CCF5C0037587C /* PrediKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DC95E5196CCF5C0037587C /* PrediKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84DC95EC196CCF5C0037587C /* PrediKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DC95E0196CCF5C0037587C /* PrediKitMac.framework */; };
 		84DC95F3196CCF5C0037587C /* PrediKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC95F2196CCF5C0037587C /* PrediKitTests.swift */; };
@@ -23,7 +25,6 @@
 		84DC9603196CD3120037587C /* ComparisonOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9602196CD3120037587C /* ComparisonOperators.swift */; };
 		84DC9605196CD4C00037587C /* SetOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9604196CD4C00037587C /* SetOperators.swift */; };
 		84DC9607196CD4DC0037587C /* LogicOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9606196CD4DC0037587C /* LogicOperators.swift */; };
-		84DC9609196CD5260037587C /* ExpressionOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9608196CD5260037587C /* ExpressionOperators.swift */; };
 		84DC961A196D0A300037587C /* PrediKitiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DC960F196D0A300037587C /* PrediKitiOS.framework */; };
 		84DC962A196D0C190037587C /* Constructors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9600196CD0A90037587C /* Constructors.swift */; };
 		84DC962B196D0C190037587C /* DynamicSelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC95FC196CCF8F0037587C /* DynamicSelf.swift */; };
@@ -31,11 +32,17 @@
 		84DC962D196D0C190037587C /* ComparisonOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9602196CD3120037587C /* ComparisonOperators.swift */; };
 		84DC962E196D0C190037587C /* SetOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9604196CD4C00037587C /* SetOperators.swift */; };
 		84DC962F196D0C190037587C /* LogicOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9606196CD4DC0037587C /* LogicOperators.swift */; };
-		84DC9630196D0C190037587C /* ExpressionOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9608196CD5260037587C /* ExpressionOperators.swift */; };
 		84DC9631196D0C1D0037587C /* PrediKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DC95E5196CCF5C0037587C /* PrediKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		84321F7F197CA6C8008EFC70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8424AA7C196FD4C900158A7F;
+			remoteInfo = optab2swift;
+		};
 		84DC95ED196CCF5C0037587C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
@@ -95,6 +102,7 @@
 		8424AA89196FDDD700158A7F /* Operator.Declaration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.Declaration.swift; sourceTree = "<group>"; };
 		8424AA8B196FDDF500158A7F /* Operator.RuntimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.RuntimeType.swift; sourceTree = "<group>"; };
 		8424AA8D196FDE2200158A7F /* Operator.Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.Body.swift; sourceTree = "<group>"; };
+		84321F82197CACC7008EFC70 /* GeneratedOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedOperators.swift; sourceTree = "<group>"; };
 		84DC95E0196CCF5C0037587C /* PrediKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrediKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC95E4196CCF5C0037587C /* Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mac-Info.plist"; sourceTree = "<group>"; };
 		84DC95E5196CCF5C0037587C /* PrediKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrediKit.h; sourceTree = "<group>"; };
@@ -107,7 +115,6 @@
 		84DC9602196CD3120037587C /* ComparisonOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonOperators.swift; sourceTree = "<group>"; };
 		84DC9604196CD4C00037587C /* SetOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetOperators.swift; sourceTree = "<group>"; };
 		84DC9606196CD4DC0037587C /* LogicOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicOperators.swift; sourceTree = "<group>"; };
-		84DC9608196CD5260037587C /* ExpressionOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionOperators.swift; sourceTree = "<group>"; };
 		84DC960F196D0A300037587C /* PrediKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrediKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC9619196D0A300037587C /* PrediKitTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PrediKitTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC9628196D0AEE0037587C /* iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
@@ -199,7 +206,7 @@
 				84DC9600196CD0A90037587C /* Constructors.swift */,
 				84DC95FC196CCF8F0037587C /* DynamicSelf.swift */,
 				84DC95FE196CCFE40037587C /* DynamicVariables.swift */,
-				84DC9608196CD5260037587C /* ExpressionOperators.swift */,
+				84321F82197CACC7008EFC70 /* GeneratedOperators.swift */,
 				84DC9604196CD4C00037587C /* SetOperators.swift */,
 				84DC9602196CD3120037587C /* ComparisonOperators.swift */,
 				84DC9606196CD4DC0037587C /* LogicOperators.swift */,
@@ -278,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DC95F6196CCF5C0037587C /* Build configuration list for PBXNativeTarget "PrediKitMac" */;
 			buildPhases = (
+				84321F81197CA6D5008EFC70 /* ShellScript */,
 				84DC95DB196CCF5C0037587C /* Sources */,
 				84DC95DC196CCF5C0037587C /* Frameworks */,
 				84DC95DD196CCF5C0037587C /* Headers */,
@@ -286,6 +294,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				84321F80197CA6C8008EFC70 /* PBXTargetDependency */,
 			);
 			name = PrediKitMac;
 			productName = PrediKit;
@@ -429,6 +438,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84321F81197CA6D5008EFC70 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/optab2swift/optab.txt",
+				"$(CONFIGURATION_BUILD_DIR)/optab2swift",
+			);
+			outputPaths = (
+				"$(SRCROOT)/PrediKit/GeneratedOperators.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\"$CONFIGURATION_BUILD_DIR/optab2swift\" \"$SCRIPT_INPUT_FILE_0\" \"$SCRIPT_OUTPUT_FILE_0\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8424AA79196FD4C900158A7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -448,7 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DC9609196CD5260037587C /* ExpressionOperators.swift in Sources */,
+				84321F83197CACC7008EFC70 /* GeneratedOperators.swift in Sources */,
 				84DC95FD196CCF8F0037587C /* DynamicSelf.swift in Sources */,
 				84DC9605196CD4C00037587C /* SetOperators.swift in Sources */,
 				84DC95FF196CCFE40037587C /* DynamicVariables.swift in Sources */,
@@ -470,8 +498,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DC9630196D0C190037587C /* ExpressionOperators.swift in Sources */,
 				84DC962F196D0C190037587C /* LogicOperators.swift in Sources */,
+				84321F84197CACE1008EFC70 /* GeneratedOperators.swift in Sources */,
 				84DC962C196D0C190037587C /* DynamicVariables.swift in Sources */,
 				84DC962E196D0C190037587C /* SetOperators.swift in Sources */,
 				84DC962A196D0C190037587C /* Constructors.swift in Sources */,
@@ -490,6 +518,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		84321F80197CA6C8008EFC70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8424AA7C196FD4C900158A7F /* optab2swift */;
+			targetProxy = 84321F7F197CA6C8008EFC70 /* PBXContainerItemProxy */;
+		};
 		84DC95EE196CCF5C0037587C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84DC95DF196CCF5C0037587C /* PrediKitMac */;
