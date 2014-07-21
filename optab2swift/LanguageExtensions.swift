@@ -19,17 +19,19 @@ func findLast<C : Swift.Collection where C.GeneratorType.Element : Equatable>(do
     }
 }
 
-func realEnumerate<C: Swift.Collection>(collection: C) -> GeneratorOf<(C.IndexType, C.GeneratorType.Element)> {
+func realEnumerate<C: Swift.Collection>(collection: C) -> SequenceOf<(C.IndexType, C.GeneratorType.Element)> {
     var i: C.IndexType = collection.startIndex
     
-    return GeneratorOf() {
-        if i != collection.endIndex {
-            let value = (i, collection[i])
-            i = i.successor()
-            return value
-        }
-        else {
-            return nil
+    return SequenceOf() { () -> GeneratorOf<(C.IndexType, C.GeneratorType.Element)> in
+        return GeneratorOf() {
+            if i != collection.endIndex {
+                let value = (i, collection[i])
+                i = i.successor()
+                return value
+            }
+            else {
+                return nil
+            }
         }
     }
 }
