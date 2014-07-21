@@ -8,60 +8,6 @@
 
 import Foundation
 
-// ==
-
-@infix func == (lhs: NSExpression, rhs: NSExpression) -> NSComparisonPredicate {
-    return NSComparisonPredicate(leftExpression: lhs, rightExpression: rhs, modifier: .DirectPredicateModifier, type: .EqualToPredicateOperatorType, options: nil)
-}
-
-@infix func == (lhs: NSExpression, rhs: AnyObject) -> NSComparisonPredicate { return lhs == NSExpression(forConstantValue: rhs) }
-@infix func == (lhs: AnyObject, rhs: NSExpression) -> NSComparisonPredicate { return NSExpression(forConstantValue: lhs) == rhs }
-
-// !=
-
-@infix func != (lhs: NSExpression, rhs: NSExpression) -> NSComparisonPredicate {
-    return NSComparisonPredicate(leftExpression: lhs, rightExpression: rhs, modifier: .DirectPredicateModifier, type: .NotEqualToPredicateOperatorType, options: nil)
-}
-
-@infix func != (lhs: NSExpression, rhs: AnyObject) -> NSComparisonPredicate { return lhs != NSExpression(forConstantValue: rhs) }
-@infix func != (lhs: AnyObject, rhs: NSExpression) -> NSComparisonPredicate { return NSExpression(forConstantValue: lhs) != rhs }
-
-// <
-
-@infix func < (lhs: NSExpression, rhs: NSExpression) -> NSComparisonPredicate {
-    return NSComparisonPredicate(leftExpression: lhs, rightExpression: rhs, modifier: .DirectPredicateModifier, type: .LessThanPredicateOperatorType, options: nil)
-}
-
-@infix func < (lhs: NSExpression, rhs: AnyObject) -> NSComparisonPredicate { return lhs < NSExpression(forConstantValue: rhs) }
-@infix func < (lhs: AnyObject, rhs: NSExpression) -> NSComparisonPredicate { return NSExpression(forConstantValue: lhs) < rhs }
-
-// >
-
-@infix func > (lhs: NSExpression, rhs: NSExpression) -> NSComparisonPredicate {
-    return NSComparisonPredicate(leftExpression: lhs, rightExpression: rhs, modifier: .DirectPredicateModifier, type: .GreaterThanPredicateOperatorType, options: nil)
-}
-
-@infix func > (lhs: NSExpression, rhs: AnyObject) -> NSComparisonPredicate { return lhs > NSExpression(forConstantValue: rhs) }
-@infix func > (lhs: AnyObject, rhs: NSExpression) -> NSComparisonPredicate { return NSExpression(forConstantValue: lhs) > rhs }
-
-// <=
-
-@infix func <= (lhs: NSExpression, rhs: NSExpression) -> NSComparisonPredicate {
-    return NSComparisonPredicate(leftExpression: lhs, rightExpression: rhs, modifier: .DirectPredicateModifier, type: .LessThanOrEqualToPredicateOperatorType, options: nil)
-}
-
-@infix func <= (lhs: NSExpression, rhs: AnyObject) -> NSComparisonPredicate { return lhs <= NSExpression(forConstantValue: rhs) }
-@infix func <= (lhs: AnyObject, rhs: NSExpression) -> NSComparisonPredicate { return NSExpression(forConstantValue: lhs) <= rhs }
-
-// >=
-
-@infix func >= (lhs: NSExpression, rhs: NSExpression) -> NSComparisonPredicate {
-    return NSComparisonPredicate(leftExpression: lhs, rightExpression: rhs, modifier: .DirectPredicateModifier, type: .GreaterThanOrEqualToPredicateOperatorType, options: nil)
-}
-
-@infix func >= (lhs: NSExpression, rhs: AnyObject) -> NSComparisonPredicate { return lhs >= NSExpression(forConstantValue: rhs) }
-@infix func >= (lhs: AnyObject, rhs: NSExpression) -> NSComparisonPredicate { return NSExpression(forConstantValue: lhs) >= rhs }
-
 // contains()
 
 func contains(list: NSExpression, item: NSExpression) -> NSComparisonPredicate {

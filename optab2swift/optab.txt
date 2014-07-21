@@ -41,3 +41,10 @@ var NSExpression.lowercaseString Void NSExpression function lowercase:
 0 NSDate.Type.dynamicDate Void NSExpression function now
 # XXX noindex:
 1 NSExpression.distanceFromLocation NSExpression NSExpression function distanceToLocation:fromLocation:
+
+@infix == NSExpression NSComparisonPredicate comparison EqualToPredicateOperatorType
+@infix != NSExpression NSComparisonPredicate comparison NotEqualToPredicateOperatorType
+@infix < NSExpression NSComparisonPredicate comparison LessThanPredicateOperatorType
+@infix <= NSExpression NSComparisonPredicate comparison LessThanOrEqualToPredicateOperatorType
+@infix > NSExpression NSComparisonPredicate comparison GreaterThanPredicateOperatorType
+@infix >= NSExpression NSComparisonPredicate comparison GreaterThanOrEqualToPredicateOperatorType
