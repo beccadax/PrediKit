@@ -12,6 +12,7 @@ extension Operator {
     enum RuntimeType: String {
         case Void = "Void"
         case NSExpression = "NSExpression"
+        case NSComparisonPredicate = "NSComparisonPredicate"
         
         init(typeString: String) {
             switch typeString {
@@ -19,6 +20,8 @@ extension Operator {
                 self = .Void
             case "NSExpression":
                 self = .NSExpression
+            case "NSComparisonPredicate":
+                self = .NSComparisonPredicate
             default:
                 debugPrintln("Unknown type string \(typeString)")
                 abort()

@@ -11,12 +11,15 @@ import Foundation
 extension Operator {
     enum Body {
         case Function (functionName: String)
+        case Comparison (typeName: String)
         case Custom (code: String)
         
         init(typeString: String, contentString: String) {
             switch typeString {
             case "function":
                 self = .Function (functionName: contentString)
+            case "comparison":
+                self = .Comparison (typeName: contentString)
             case "custom":
                 self = .Custom (code: contentString)
             default:
@@ -40,6 +43,8 @@ extension Operator {
             case let .Function(functionName: name):
                 let operandList = join(", ", literalOperands)
                 return "NSExpression(forFunction: \"\(name)\", arguments: [\(operandList)])"
+            case let .Comparison(typeName: name):
+                return "NSComparisonPredicate(leftExpression: \(literalOperands[0]), rightExpression: \(literalOperands[1]), modifier: .DirectPredicateModifier, type: .\(name), options: nil)"
             case let .Custom(code: code):
                 return code
             }
