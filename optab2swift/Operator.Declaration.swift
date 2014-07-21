@@ -145,7 +145,8 @@ extension Operator {
             case "var":
                 self = .ComputedProperty (Declaration.parseFunctionName(nameString))
             default:
-                fatalError("Did not recognize type string")
+                debugPrintln("Unknown operator declaration type string \(typeString)")
+                abort()
             }
         }
         

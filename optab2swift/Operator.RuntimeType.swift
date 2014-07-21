@@ -20,7 +20,8 @@ extension Operator {
             case "NSExpression":
                 self = .NSExpression
             default:
-                fatalError("Unknown RuntimeType type string")
+                debugPrintln("Unknown type string \(typeString)")
+                abort()
             }
         }
     }

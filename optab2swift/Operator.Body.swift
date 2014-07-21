@@ -20,7 +20,8 @@ extension Operator {
             case "custom":
                 self = .Custom (code: contentString)
             default:
-                fatalError("Unknown operator body type")
+                debugPrintln("Unknown operator body type \(typeString)")
+                abort()
             }
         }
         
