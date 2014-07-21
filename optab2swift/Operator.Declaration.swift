@@ -62,7 +62,10 @@ extension Operator {
             switch self {
             case .ComputedProperty:
                 decl += "var \(name): "
-            case .InfixOperator, .PrefixOperator, .VoidFunction, .UnaryFunction, .BinaryFunction:
+            case .PrefixOperator:
+                decl += "@prefix "
+                fallthrough
+            case .InfixOperator, .VoidFunction, .UnaryFunction, .BinaryFunction:
                 decl += "func \(name) ("
                 decl += join(", ", map(realEnumerate(operands)) { (i, name) in
                     if contains(anyObjectArguments, i) {
