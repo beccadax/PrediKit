@@ -9,7 +9,7 @@
 import Foundation
 
 extension NSFileHandle {
-    class func fileHandleOrStandardHandle(forPath path: String, operation: Operation, error: AutoreleasingUnsafePointer<NSError?>) -> NSFileHandle? {
+    public class func fileHandleOrStandardHandle(forPath path: String, operation: Operation, error: AutoreleasingUnsafePointer<NSError?>) -> NSFileHandle? {
         if path == "-" {
             return operation.standardHandle
         }
@@ -19,14 +19,14 @@ extension NSFileHandle {
         }
     }
     
-    func writeString(string: String) {
+    public func writeString(string: String) {
         writeData(string.dataUsingEncoding(NSUTF8StringEncoding))
     }
     
-    enum Operation {
+    public enum Operation {
         case Reading, Writing
         
-        var standardHandle: NSFileHandle {
+        private var standardHandle: NSFileHandle {
         switch self {
         case .Reading:
             return NSFileHandle.fileHandleWithStandardInput()
@@ -35,7 +35,7 @@ extension NSFileHandle {
             }
         }
         
-        func fileHandle(forURL URL: NSURL?, error: AutoreleasingUnsafePointer<NSError?>) -> NSFileHandle? {
+        private func fileHandle(forURL URL: NSURL?, error: AutoreleasingUnsafePointer<NSError?>) -> NSFileHandle? {
             switch self {
             case .Reading:
                 return NSFileHandle.fileHandleForReadingFromURL(URL, error: error)
