@@ -40,7 +40,7 @@ class Operator {
     }
     
     convenience init(line: String) {
-        let parts = split(line.unicodeScalars, { $0.isSpace() }, maxSplit: 5)
+        let parts = split(line, { $0 == " " }, maxSplit: 5)
         
         self.init(declarationTypeString: parts[0], declarationNameString: parts[1], argumentTypeString: parts[2], returnTypeString: parts[3],  bodyTypeString: parts[4], bodyContentString: parts[5])
     }
