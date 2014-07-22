@@ -66,7 +66,7 @@ extension Operator {
                 decl += "@prefix "
                 fallthrough
             case .InfixOperator, .VoidFunction, .UnaryFunction, .BinaryFunction:
-                decl += "func \(name) ("
+                decl += "public func \(name) ("
                 decl += join(", ", map(realEnumerate(operands)) { (i, name) in
                     if contains(anyObjectArguments, i) {
                         return "\(name): AnyObject"

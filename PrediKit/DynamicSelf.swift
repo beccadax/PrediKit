@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct DynamicSelf {
+public struct DynamicSelf {
     /// Subscript to examine a key path
-    subscript (keyPath: String?) -> NSExpression {
+    public subscript (keyPath: String?) -> NSExpression {
         if let realKeyPath = keyPath {
             return NSExpression(forKeyPath: realKeyPath)
         }
@@ -20,7 +20,7 @@ struct DynamicSelf {
     }
     
     /// Use where an expression is required to examine self
-    func __conversion() -> NSExpression {
+    public func __conversion() -> NSExpression {
         return NSExpression.expressionForEvaluatedObject()
     }
 }

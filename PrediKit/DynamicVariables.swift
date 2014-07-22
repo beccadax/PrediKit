@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct DynamicVariables {
+public struct DynamicVariables {
     var supportedVariables: [String]
     
     init(supportedVariables: [String]) {
         self.supportedVariables = supportedVariables
     }
     
-    subscript (variableName: String) -> NSExpression {
+    public subscript (variableName: String) -> NSExpression {
         assert(find(supportedVariables, variableName), "Variable must be among supported variables")
         return NSExpression(forVariable: variableName)
     }
