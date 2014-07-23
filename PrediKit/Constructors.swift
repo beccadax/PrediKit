@@ -9,21 +9,21 @@
 import Foundation
 
 extension NSPredicate {
-    class func fromClosure(closure: DynamicSelf -> NSPredicate) -> NSPredicate {
+    public class func fromClosure(closure: DynamicSelf -> NSPredicate) -> NSPredicate {
         return closure(DynamicSelf())
     }
     
-    class func fromClosureWithVariables(variables: [String], _ closure: (DynamicSelf, DynamicVariables) -> NSPredicate) -> NSPredicate {
+    public class func fromClosureWithVariables(variables: [String], _ closure: (DynamicSelf, DynamicVariables) -> NSPredicate) -> NSPredicate {
         return closure(DynamicSelf(), DynamicVariables(supportedVariables: variables))
     }
 }
 
 extension NSExpression {
-    class func fromClosure(closure: DynamicSelf -> NSExpression) -> NSExpression {
+    public class func fromClosure(closure: DynamicSelf -> NSExpression) -> NSExpression {
         return closure(DynamicSelf())
     }
     
-    class func fromClosureWithVariables(variables: [String], _ closure: (DynamicSelf, DynamicVariables) -> NSExpression) -> NSExpression {
+    public class func fromClosureWithVariables(variables: [String], _ closure: (DynamicSelf, DynamicVariables) -> NSExpression) -> NSExpression {
         return closure(DynamicSelf(), DynamicVariables(supportedVariables: variables))
     }
 }

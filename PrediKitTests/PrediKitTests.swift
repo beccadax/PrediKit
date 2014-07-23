@@ -23,19 +23,19 @@ class PrediKitTests: XCTestCase {
     }
     
     func testBasicPredicate() {
-        XCTAssertEqualObjects(NSPredicate.fromClosure { $0 == 1 }.description, "SELF == 1", "Predicate tests that self equals 1")
+        XCTAssertEqual(NSPredicate.fromClosure { $0 == 1 }.description!, "SELF == 1", "Predicate tests that self equals 1")
     }
     
     func testKeyPathPredicate() {
-        XCTAssertEqualObjects(NSPredicate.fromClosure { $0["value"] == 1 }.description, "value == 1", "Predicate tests that self.value equals 1")
+        XCTAssertEqual(NSPredicate.fromClosure { $0["value"] == 1 }.description!, "value == 1", "Predicate tests that self.value equals 1")
     }
     
     func testExpressionPredicate() {
-        XCTAssertEqualObjects(NSPredicate.fromClosure { $0["nextStep"] == $0["step"] + 1 }.description, "nextStep == step + 1", "Predicate tests that self.value equals 1")
+        XCTAssertEqual(NSPredicate.fromClosure { $0["nextStep"] == $0["step"] + 1 }.description!, "nextStep == step + 1", "Predicate tests that self.value equals 1")
     }
 
     func testCompoundPredicate() {
-        XCTAssertEqualObjects(NSPredicate.fromClosure { $0 == "hello" && $0["value"] == 1 }.description, "SELF == \"hello\" AND value == 1", "Predicate tests that self.value equals 1")
+        XCTAssertEqual(NSPredicate.fromClosure { $0 == "hello" && $0["value"] == 1 }.description!, "SELF == \"hello\" AND value == 1", "Predicate tests that self.value equals 1")
     }
     
 //    func testPerformanceExample() {

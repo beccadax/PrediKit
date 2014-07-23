@@ -18,16 +18,16 @@ import Foundation
 // FML.
 
 operator infix ∪ {}
-@infix func ∪ (lhs: NSExpression, rhs: NSExpression) -> NSExpression {
+@infix public func ∪ (lhs: NSExpression, rhs: NSExpression) -> NSExpression {
     return NSExpression(forUnionSet: lhs, with: rhs)
 }
 
 operator infix ∩ {}
-@infix func ∩ (lhs: NSExpression, rhs: NSExpression) -> NSExpression {
+@infix public func ∩ (lhs: NSExpression, rhs: NSExpression) -> NSExpression {
     return NSExpression(forIntersectSet: lhs, with: rhs)
 }
 
 operator infix ∖ {}
-@infix func ∖ (lhs: NSExpression, rhs: NSExpression) -> NSExpression {
+@infix public func ∖ (lhs: NSExpression, rhs: NSExpression) -> NSExpression {
     return NSExpression(forMinusSet: lhs, with: rhs)
 }
