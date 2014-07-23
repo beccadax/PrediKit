@@ -8,13 +8,17 @@
 
 import Foundation
 
-extension NSPredicate {
+extension NSPredicate: BooleanLiteralConvertible {
     public class func fromClosure(closure: DynamicSelf -> NSPredicate) -> NSPredicate {
         return closure(DynamicSelf())
     }
     
     public class func fromClosureWithVariables(variables: [String], _ closure: (DynamicSelf, DynamicVariables) -> NSPredicate) -> NSPredicate {
         return closure(DynamicSelf(), DynamicVariables(supportedVariables: variables))
+    }
+    
+    public class func convertFromBooleanLiteral(value: Bool) -> Self {
+        return self(value: value)
     }
 }
 

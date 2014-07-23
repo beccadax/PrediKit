@@ -38,6 +38,10 @@ class PrediKitTests: XCTestCase {
         XCTAssertEqual(NSPredicate.fromClosure { $0 == "hello" && $0["value"] == 1 }.description!, "SELF == \"hello\" AND value == 1", "Predicate tests that self.value equals 1")
     }
     
+    func testTruePredicate() {
+        XCTAssertEqual(NSPredicate.fromClosure { _ in true }.description!, "TRUEPREDICATE", "Boolean literals convert to predicates")
+    }
+    
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measureBlock() {
