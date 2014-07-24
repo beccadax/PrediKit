@@ -16,6 +16,7 @@
 		8424AA8E196FDE2200158A7F /* Operator.Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA8D196FDE2200158A7F /* Operator.Body.swift */; };
 		84321F83197CACC7008EFC70 /* GeneratedOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84321F82197CACC7008EFC70 /* GeneratedOperators.swift */; };
 		84321F84197CACE1008EFC70 /* GeneratedOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84321F82197CACC7008EFC70 /* GeneratedOperators.swift */; };
+		8454F67A198091ED00E7A9CD /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F6F1B197F6B5800C560E6 /* Literals.swift */; };
 		846F6F1C197F6B5800C560E6 /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F6F1B197F6B5800C560E6 /* Literals.swift */; };
 		84DC95E6196CCF5C0037587C /* PrediKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DC95E5196CCF5C0037587C /* PrediKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84DC95EC196CCF5C0037587C /* PrediKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DC95E0196CCF5C0037587C /* PrediKitMac.framework */; };
