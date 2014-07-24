@@ -16,7 +16,7 @@
 		8424AA8E196FDE2200158A7F /* Operator.Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA8D196FDE2200158A7F /* Operator.Body.swift */; };
 		84321F83197CACC7008EFC70 /* GeneratedOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84321F82197CACC7008EFC70 /* GeneratedOperators.swift */; };
 		84321F84197CACE1008EFC70 /* GeneratedOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84321F82197CACC7008EFC70 /* GeneratedOperators.swift */; };
-		846F6F1C197F6B5800C560E6 /* Conversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F6F1B197F6B5800C560E6 /* Conversions.swift */; };
+		846F6F1C197F6B5800C560E6 /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F6F1B197F6B5800C560E6 /* Literals.swift */; };
 		84DC95E6196CCF5C0037587C /* PrediKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DC95E5196CCF5C0037587C /* PrediKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84DC95EC196CCF5C0037587C /* PrediKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DC95E0196CCF5C0037587C /* PrediKitMac.framework */; };
 		84DC95F3196CCF5C0037587C /* PrediKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC95F2196CCF5C0037587C /* PrediKitTests.swift */; };
@@ -111,7 +111,7 @@
 		8424AA8B196FDDF500158A7F /* Operator.RuntimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.RuntimeType.swift; sourceTree = "<group>"; };
 		8424AA8D196FDE2200158A7F /* Operator.Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.Body.swift; sourceTree = "<group>"; };
 		84321F82197CACC7008EFC70 /* GeneratedOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedOperators.swift; sourceTree = "<group>"; };
-		846F6F1B197F6B5800C560E6 /* Conversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversions.swift; sourceTree = "<group>"; };
+		846F6F1B197F6B5800C560E6 /* Literals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Literals.swift; sourceTree = "<group>"; };
 		84DC95E0196CCF5C0037587C /* PrediKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrediKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC95E4196CCF5C0037587C /* Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mac-Info.plist"; sourceTree = "<group>"; };
 		84DC95E5196CCF5C0037587C /* PrediKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrediKit.h; sourceTree = "<group>"; };
@@ -219,7 +219,7 @@
 				84DC9604196CD4C00037587C /* SetOperators.swift */,
 				84DC9602196CD3120037587C /* ComparisonOperators.swift */,
 				84DC9606196CD4DC0037587C /* LogicOperators.swift */,
-				846F6F1B197F6B5800C560E6 /* Conversions.swift */,
+				846F6F1B197F6B5800C560E6 /* Literals.swift */,
 				84DC95E3196CCF5C0037587C /* Supporting Files */,
 			);
 			path = PrediKit;
@@ -511,7 +511,7 @@
 				84DC9605196CD4C00037587C /* SetOperators.swift in Sources */,
 				84DC95FF196CCFE40037587C /* DynamicVariables.swift in Sources */,
 				84DC9603196CD3120037587C /* ComparisonOperators.swift in Sources */,
-				846F6F1C197F6B5800C560E6 /* Conversions.swift in Sources */,
+				846F6F1C197F6B5800C560E6 /* Literals.swift in Sources */,
 				84DC9607196CD4DC0037587C /* LogicOperators.swift in Sources */,
 				84DC9601196CD0A90037587C /* Constructors.swift in Sources */,
 			);
