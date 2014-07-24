@@ -38,6 +38,20 @@ class PrediKitTests: XCTestCase {
         XCTAssertEqual(NSPredicate.fromClosure { $0 == "hello" && $0["value"] == 1 }.description!, "SELF == \"hello\" AND value == 1", "Predicate tests that self.value equals 1")
     }
     
+    func testBooleanPredicateLiteral() {
+        XCTAssertEqual(NSPredicate.fromClosure { _ in true }.description!, "TRUEPREDICATE", "Boolean literals convert to predicates")
+    }
+    
+    func testExpressionLiterals() {
+        XCTAssertEqual(NSExpression.fromClosure { _ in true }.description!, "1", "Boolean literals in NSExpression context convert to expressions")
+        XCTAssertEqual(NSExpression.fromClosure { _ in nil }.description!, "nil", "Nil literals convert to expressions")
+        XCTAssertEqual(NSExpression.fromClosure { _ in 1 }.description!, "1", "Integer literals convert to expressions")
+        XCTAssertEqual(NSExpression.fromClosure { _ in 1.5 }.description!, "1.5", "Double literals convert to expressions")
+        XCTAssertEqual(NSExpression.fromClosure { _ in "string" }.description!, "\"string\"", "String literals convert to expressions")
+        XCTAssertEqual(NSExpression.fromClosure { _ in [1, 2, 3] }.description!, "{1, 2, 3}", "Array literals convert to expressions")
+        XCTAssertEqual(NSExpression.fromClosure { _ in [1: 2, 3: 4] }.description!, "{1 = 2, 3 = 4}", "Dictionary literals convert to expressions")
+    }
+    
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measureBlock() {
