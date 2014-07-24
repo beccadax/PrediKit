@@ -16,6 +16,7 @@
 		8424AA8E196FDE2200158A7F /* Operator.Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424AA8D196FDE2200158A7F /* Operator.Body.swift */; };
 		84321F83197CACC7008EFC70 /* GeneratedOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84321F82197CACC7008EFC70 /* GeneratedOperators.swift */; };
 		84321F84197CACE1008EFC70 /* GeneratedOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84321F82197CACC7008EFC70 /* GeneratedOperators.swift */; };
+		8454F67A198091ED00E7A9CD /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F6F1B197F6B5800C560E6 /* Literals.swift */; };
 		846F6F1C197F6B5800C560E6 /* Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F6F1B197F6B5800C560E6 /* Literals.swift */; };
 		84DC95E6196CCF5C0037587C /* PrediKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DC95E5196CCF5C0037587C /* PrediKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		84DC95EC196CCF5C0037587C /* PrediKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DC95E0196CCF5C0037587C /* PrediKitMac.framework */; };
@@ -34,6 +35,7 @@
 		84DC962E196D0C190037587C /* SetOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9604196CD4C00037587C /* SetOperators.swift */; };
 		84DC962F196D0C190037587C /* LogicOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC9606196CD4DC0037587C /* LogicOperators.swift */; };
 		84DC9631196D0C1D0037587C /* PrediKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DC95E5196CCF5C0037587C /* PrediKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84EE80FA19808FD400D7B8E5 /* PrediKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DC95F2196CCF5C0037587C /* PrediKitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,34 @@
 			remoteInfo = PrediKitiOS;
 		};
 		84E3BC37196F56A40006A03F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DC960E196D0A300037587C;
+			remoteInfo = PrediKitiOS;
+		};
+		84EE80F419808EA300D7B8E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DC95DF196CCF5C0037587C;
+			remoteInfo = PrediKitMac;
+		};
+		84EE80F619808EA300D7B8E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DC95DF196CCF5C0037587C;
+			remoteInfo = PrediKitMac;
+		};
+		84EE80F819808ED400D7B8E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DC960E196D0A300037587C;
+			remoteInfo = PrediKitiOS;
+		};
+		84EE80FB1980916700D7B8E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84DC95D7196CCF5B0037587C /* Project object */;
 			proxyType = 1;
@@ -324,6 +354,8 @@
 			dependencies = (
 				84DC95EE196CCF5C0037587C /* PBXTargetDependency */,
 				84DC9634196D139B0037587C /* PBXTargetDependency */,
+				84EE80F519808EA300D7B8E5 /* PBXTargetDependency */,
+				84EE80F719808EA300D7B8E5 /* PBXTargetDependency */,
 			);
 			name = "PrediKitTests-Mac";
 			productName = PrediKitTests;
@@ -364,6 +396,8 @@
 				84DC961C196D0A300037587C /* PBXTargetDependency */,
 				84DC9636196D13A60037587C /* PBXTargetDependency */,
 				84E3BC38196F56A40006A03F /* PBXTargetDependency */,
+				84EE80F919808ED400D7B8E5 /* PBXTargetDependency */,
+				84EE80FC1980916700D7B8E5 /* PBXTargetDependency */,
 			);
 			name = "PrediKitTests-iOS";
 			productName = PrediKitTests;
@@ -530,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DC962F196D0C190037587C /* LogicOperators.swift in Sources */,
+				8454F67A198091ED00E7A9CD /* Literals.swift in Sources */,
 				84321F84197CACE1008EFC70 /* GeneratedOperators.swift in Sources */,
 				84DC962C196D0C190037587C /* DynamicVariables.swift in Sources */,
 				84DC962E196D0C190037587C /* SetOperators.swift in Sources */,
@@ -543,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EE80FA19808FD400D7B8E5 /* PrediKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +619,26 @@
 			isa = PBXTargetDependency;
 			target = 84DC960E196D0A300037587C /* PrediKitiOS */;
 			targetProxy = 84E3BC37196F56A40006A03F /* PBXContainerItemProxy */;
+		};
+		84EE80F519808EA300D7B8E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DC95DF196CCF5C0037587C /* PrediKitMac */;
+			targetProxy = 84EE80F419808EA300D7B8E5 /* PBXContainerItemProxy */;
+		};
+		84EE80F719808EA300D7B8E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DC95DF196CCF5C0037587C /* PrediKitMac */;
+			targetProxy = 84EE80F619808EA300D7B8E5 /* PBXContainerItemProxy */;
+		};
+		84EE80F919808ED400D7B8E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DC960E196D0A300037587C /* PrediKitiOS */;
+			targetProxy = 84EE80F819808ED400D7B8E5 /* PBXContainerItemProxy */;
+		};
+		84EE80FC1980916700D7B8E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DC960E196D0A300037587C /* PrediKitiOS */;
+			targetProxy = 84EE80FB1980916700D7B8E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -806,6 +862,7 @@
 		84DC9626196D0A300037587C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -825,6 +882,7 @@
 		84DC9627196D0A300037587C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

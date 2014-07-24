@@ -8,7 +8,14 @@
 
 import Foundation
 import XCTest
-import PrediKitMac
+
+#if os(OSX)
+    import PrediKitMac
+#elseif os(iOS)
+    import PrediKitiOS
+#else
+    import PrediKitNotSupported
+#endif
 
 class PrediKitTests: XCTestCase {
     
