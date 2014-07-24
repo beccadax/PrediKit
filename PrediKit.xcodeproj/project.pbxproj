@@ -141,6 +141,7 @@
 		8424AA8B196FDDF500158A7F /* Operator.RuntimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.RuntimeType.swift; sourceTree = "<group>"; };
 		8424AA8D196FDE2200158A7F /* Operator.Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.Body.swift; sourceTree = "<group>"; };
 		84321F82197CACC7008EFC70 /* GeneratedOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedOperators.swift; sourceTree = "<group>"; };
+		8454F67B1980A75600E7A9CD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		846F6F1B197F6B5800C560E6 /* Literals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Literals.swift; sourceTree = "<group>"; };
 		84DC95E0196CCF5C0037587C /* PrediKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrediKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DC95E4196CCF5C0037587C /* Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mac-Info.plist"; sourceTree = "<group>"; };
@@ -219,6 +220,7 @@
 		84DC95D6196CCF5B0037587C = {
 			isa = PBXGroup;
 			children = (
+				8454F67B1980A75600E7A9CD /* README.md */,
 				84DC95E2196CCF5C0037587C /* PrediKit */,
 				84DC95EF196CCF5C0037587C /* PrediKitTests */,
 				8424AA7E196FD4C900158A7F /* optab2swift */,
